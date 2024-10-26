@@ -83,8 +83,8 @@ function Get-BAMData {
 
                 # Create custom object with Run Counter
                 [PSCustomObject]@{
-                    'Execution Time (UTC)'     = $TimeUTC
-                    'Last Execution User Time' = $TimeUser
+                    'Execution Time (UTC)'     = $TimeUser
+                    'Last Execution User Time' = $TimeUTC
                     'Application'              = $Application
                     'Path'                     = $Path
                     'Signature'                = $Signature
