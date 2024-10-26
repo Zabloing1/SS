@@ -172,8 +172,8 @@ function Initialize-Program {
 ╚═════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝  ░░░╚═╝░░░╚═╝╚══════╝░░░╚═╝░░░╚═╝░░╚══════╝╚═╝░░╚═╝
 "@ -ForegroundColor Red
     Write-Host " " * 2
-    Write-Host "Retrieving BAM Entries from Registry Editor........." -ForegroundColor Yellow
-    Write-Host "BackGround Activity Moderator Viewer by QuickPots" -ForegroundColor Cyan
+    Write-Host "Retrieving BAM Entries from Registry Editor........." -ForegroundColor BLUE
+    Write-Host "BackGround Activity Moderator Viewer by QuickPots" -ForegroundColor RED
 
     Mount-Registry
 
