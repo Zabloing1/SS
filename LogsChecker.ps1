@@ -81,7 +81,7 @@ while ($true) {
                 (New-Object System.Net.WebClient).DownloadFile($url, $output)
                 Write-Host "Download Complete"
                 Start-Process -FilePath $output
-                $confirmation = Read-Host "WinRAR è stato avviato correttamente, premi il tasto invio per andare avanti"
+                $confirmation = Read-Host "WinRAR has started successfully, press the enter key to continue"
             } else {
                 Write-Host "No other options are available as of now"
                 Pause
