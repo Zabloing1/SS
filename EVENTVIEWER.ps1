@@ -7,4 +7,4 @@ Get-EventLog -LogName $EventLog -InstanceId $EventID -Newest 3
      }
      $Results += $Events
  }
-$Results | out-gridview
+$Results |  out-gridview
