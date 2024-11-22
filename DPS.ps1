@@ -31,7 +31,7 @@ if (-not (Test-Path -Path $strings2Path)) {
 }
 
 $outputFilePath = Join-Path $scriptDirectory "dump.txt"
-$dumpCommand = "$strings2path -raw -nh"
+$dumpCommand = "$strings2path -pid $pidMatch -raw -nh"
 
 try {
     $memoryDump = Invoke-Expression $dumpCommand
