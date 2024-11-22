@@ -4,11 +4,6 @@ $cmdOutput = cmd /c tasklist /svc /FI ""Services eq $service""
 $pidMatch = $cmdOutput | Select-String -Pattern "$service" | ForEach-Object { $_.Line -split '\s+' }
 $targetPID = $pidMatch[1]
 
-if ([string]::IsNullOrWhiteSpace($targetPID)) {
-    Write-Host "Service $service not found or no PID available."
-    exit
-}
-
 $scriptDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
 $dumpFilePath = Join-Path $scriptDirectory "dump.txt"
 $stringsUrl = "https://pastebin.com/raw/ZDmzDSVS"
