@@ -1,5 +1,5 @@
 $service = "DPS"
-$cmdOutput = cmd /c "tasklist /svc /FI ""Services eq $service"""
+$cmdOutput = cmd /c tasklist /svc /FI ""Services eq $service""
 
 $pidMatch = $cmdOutput | Select-String -Pattern "$service" | ForEach-Object { $_.Line -split '\s+' }
 $targetPID = $pidMatch[1]
