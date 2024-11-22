@@ -11,7 +11,7 @@ if ([string]::IsNullOrWhiteSpace($targetPID)) {
 
 $scriptDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
 $dumpFilePath = Join-Path $scriptDirectory "dump.txt"
-$stringsUrl = "https://pastebin.com/raw/mbC2VeSD"
+$stringsUrl = "https://pastebin.com/raw/ZDmzDSVS"
 $stringsFilePath = Join-Path $scriptDirectory "strings.txt"
 
 Invoke-WebRequest -Uri $stringsUrl -OutFile $stringsFilePath
