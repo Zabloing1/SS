@@ -1,4 +1,4 @@
-$service = "PcaSvc"
+$service = Read-Host "Enter PID of PCASVC"
 $cmdOutput = cmd /c TASKLIST /SVC /FI "SERVICES eq $service"
 
 $pidMatch = $cmdOutput | Select-String -Pattern "$service" | ForEach-Object { $_.Line -split '\s+' }
